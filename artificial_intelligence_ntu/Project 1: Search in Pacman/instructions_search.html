@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
@@ -25,20 +25,28 @@
 
 <p>In this project, your Pacman agent will find paths through his maze world, both to reach a particular location and to collect food efficiently.  You will build general search algorithms and apply them to Pacman scenarios. </p>
 
-<p>The code for this project consists of several Python files, some of which you will need to read and understand in order to complete the assignment, and some of which you can ignore. You can download all the code and supporting files (including this description) as <a href="search.zip">search.zip</a>.</p>
+<p>The code for this project consists of several Python files, some of which you will need to read and understand in order to complete the assignment, and some of which you can ignore. You can download all the code and supporting files (including this description) as a <a href="search.zip">zip archive</a>.</p>
 
-<h4>中文說明</h4>
+<p>The assignment files are not compatible with Python 3. Please use Python 2 to finish the assignment. Version 2.7.2 or higher is recommended</p>
 
-<p>在這份作業中，你將會以程式實作Search演算法，讓你的Pacman代理人(agent)在迷宮內進行探索其移動路徑，以同時達成兩項目標：在有限時間內，「走到特定位置」與「吃到愈多點數」。</p>
+<h4>????</h4>
 
-<p>請從<a href="search.zip">search.zip</a>壓縮包下載作業的程式碼及說明文件，在程式碼中包含數個Python檔案，你需要詳讀其中幾個檔案(見下述)才能完成作業。</p>
+<p>??????,????????Search???,???Pacman???(agent)?????????????,?????????:??????,??????????????????</p>
+
+<p>??<a href="search.zip">search.zip</a>????????????????,?????????Python??,???????????(???)???????</p>
+
+<p>???????????Python 3???Python 2??????????Python 2.7.2???????</p>
 
 <table border="0" cellpadding="10">
   <tr><td colspan="2"><b>Files you'll edit:</b></td></tr>
   
   <tr><td><code><a href="docs/search.html">search.py</a></code></td>
-  <td>Where all of your search algorithms and search-based agents will reside.</td></tr>
+  <td>Where all of your search algorithms will reside.</td></tr>
   
+  <tr><td><code><a href="docs/searchAgents.html">searchAgents.py</a></code></td>
+  <td>Where all of your search-based agents will reside.</td></tr>
+
+
   <tr><td colspan="2"><b>Files you might want to look at:</b></td></tr>
   
   <tr><td><code><a href="docs/pacman.html">pacman.py</a></code></td>
@@ -73,24 +81,24 @@
 
 </table>
 <p>
-<p><strong>Deadline:</strong> 2014 / 11 / 25, 11:59 pm  </p>
+<p><strong>Deadline:</strong> 2014 / 12 / 2, 11:59 pm  </p>
 
-<p><strong>What to submit:</strong> You need implement 6 questions by filling in portions of <code><a href="docs/search.html">search.py</a></code> during the assignment.  You should submit <em>this file only</em>. Submit the file to the <a href="https://class.coursera.org/ai-001/assignment">Programming Assignments</a> Section as <em>Output Submission</em>.</p>
+<p><strong>What to submit:</strong> You need implement 6 questions by filling in portions of <code><a href="docs/search.html">search.py</a></code> during the assignment.  You should submit <em>this file only</em>. Submit <code><a href="docs/search.html">search.py</a></code> as <em>Output Submission</em>, <code><a href="docs/searchAgents.html">search.py</a></code> as <em>Additional Submission</em> to the <a href="https://class.coursera.org/ai-001/assignment">Programming Assignments</a> Section .</p>
 
 <p><strong>Evaluation:</strong> Your code will be graded for technical
 correctness. Please <em>do not</em> change the names of any provided functions or classes within the code, or you will break our tester. However, the correctness of your implementation -- not the tester's output -- will be the final judge of your score.
 
 <p><strong>Getting Help:</strong> You are not alone!  If you find yourself stuck on something, feel free to address it in the <a href="https://class.coursera.org/ai-001/forum/list?forum_id=10009">forum</a> for help!  We want these projects to be rewarding and instructional, not frustrating and demoralizing.  But, we don't know when or how to help unless you ask.  One more piece of advice: if you don't know what a variable does or what kind of values it takes, print it out.
 
-<h4>中文說明</h4>
+<h4>????</h4>
 
-<p><strong>繳交期限:</strong> 2014 / 11 / 25, 11:59 pm  </p>
+<p><strong>????:</strong> 2014 / 12 / 2, 11:59 pm  </p>
 
-<p><strong>繳交文件:</strong> 針對此作業的六個問題，請完善<code><a href="docs/search.html">search.py</a></code>中的程式碼，以<em>Output Submission</em>的形式交到<a href="https://class.coursera.org/ai-001/assignment">程式作業區</a>。  ※註：作業繳交只需要上傳<code><a href="docs/search.html">search.py</a></code>，切勿修改或繳交其他的檔案！</p>
+<p><strong>????:</strong> ??????????,???<code><a href="docs/search.html">search.py</a></code>?<code><a href="docs/searchAgents.html">searchAgents.py</a></code>?????,?<code><a href="docs/search.html">search.py</a></code>?<em>Output Submission</em>????<code><a href="docs/searchAgents.html">searchAgents.py</a></code>?<em>Additional Submission</em>???,??<a href="https://class.coursera.org/ai-001/assignment">?????</a>?  ??:?????????<code><a href="docs/search.html">search.py</a></code>?<code><a href="docs/searchAgents.html">search.py</a></code>,????????????!</p>
 
-<p><strong>評量方式:</strong> 你的程式將會以正確性、而非程式的輸出結果來評分。 <em>請勿</em>更改任何程式中任何函式或類別的名稱，否則評分程式將無法執行你的程式碼。
+<p><strong>????:</strong> ???????????????????????? <em>??</em>?????????????????,?????????????????
 
-<p><strong>問題與協助:</strong> 有任何作業相關的疑問，歡迎在<a href="https://class.coursera.org/ai-001/forum/list?forum_id=10009">作業討論區</a>提出！我們希望作業能夠幫助你學習及提升程式能力，而非打擊你的信心。所以如果你在一個題目卡關很久，就和討論區的助教與同學們一同討論吧！  ※註：在Python的程式碼中，如果你不確定某一個變數(如<code>var1</code>)的值或功能，將它印出來(<code>print var1</code>)看吧！
+<p><strong>?????:</strong> ??????????,???<a href="https://class.coursera.org/ai-001/forum/list?forum_id=10009">?????</a>??!????????????????????,???????????????????????,?????????????????!  ??:?Python?????,???????????(?<code>var1</code>)?????,?????(<code>print var1</code>)??!
 
 <h3> Welcome to Pacman </h3>
 After downloading the code (<a href="search.zip">search.zip</a>), unzipping it and changing to the <em>search</em> directory, you should be able to play a game of Pacman by typing the following at the command line:
@@ -101,7 +109,7 @@ Note: if you get error messages regarding python-tk, use your package manager to
 
 Pacman lives in a shiny blue world of twisting corridors and tasty round treats.  Navigating this world efficiently will be Pacman's first step in mastering his domain.  
 
-<p> The simplest agent in <a href="docs/search.html">search.py</a> is called the <code>GoWestAgent</code>, which always goes West (a trivial reflex agent).  This agent can occasionally win:
+<p> The simplest agent in <a href="docs/searchAgents.html">searchAgents.py</a> is called the <code>GoWestAgent</code>, which always goes West (a trivial reflex agent).  This agent can occasionally win:
 
 <pre>python pacman.py --layout testMaze --pacman GoWestAgent</pre>
 
@@ -121,7 +129,7 @@ Also, all of the commands that appear in this project also appear in <a href="co
 
 <h3> Finding a Fixed Food Dot using Search Algorithms </h3>
 
-In <code><a href="docs/search.html">search.py</a></code>, you'll find a fully implemented <code>SearchAgent</code>, which plans out a path through Pacman's world and then executes that path step-by-step.  The search algorithms for formulating a plan are not implemented -- that's your job.  As you work through the following questions, you might need to refer to this <a href="#Glossary">glossary of objects in the code</a>.
+In <code><a href="docs/searchAgents.html">searchAgents.py</a></code>, you'll find a fully implemented <code>SearchAgent</code>, which plans out a path through Pacman's world and then executes that path step-by-step.  The search algorithms for formulating a plan are not implemented -- that's your job.  As you work through the following questions, you might need to refer to this <a href="#Glossary">glossary of objects in the code</a>.
 
 First, test that the <code>SearchAgent</code> is working correctly by running:
 
@@ -137,7 +145,7 @@ The command above tells the <code>SearchAgent</code> to use <code>tinyMazeSearch
 
 <p><em>Hint:</em> Make sure to check out the <code>Stack, Queue</code> and <code>PriorityQueue</code> types provided to you in <code><a href="docs/util.html">util.py</a></code>!  </p>
 
-<p><em><strong>Question 1 (5 points) </strong></em> Implement the depth-first search (DFS) algorithm in the
+<p><em><strong>Question 1 (1 points) </strong></em> Implement the depth-first search (DFS) algorithm in the
 <code>depthFirstSearch</code> function in <code><a href="docs/search.html">search.py</a></code>. To make your algorithm <em>complete</em>, write the graph search version of DFS, which avoids expanding any already visited states (textbook section 3.5). 
 
 <p>Your code should quickly find a solution for:
@@ -152,7 +160,7 @@ The Pacman board will show an overlay of the states explored, and the order in w
 
 <p> <em>Hint:</em> If you use a <code>Stack</code> as your data structure, the solution found by your DFS algorithm for <code>mediumMaze</code> should have a length of 130 (provided you push successors onto the fringe in the order provided by getSuccessors; you might get 244 if you push them in the reverse order). Is this a least cost solution? If not, think about what depth-first search is doing wrong.
 
-<p><em><strong>Question 2 (5 points) </strong></em> Implement the breadth-first search (BFS) algorithm in the
+<p><em><strong>Question 2 (1 point) </strong></em> Implement the breadth-first search (BFS) algorithm in the
 <code>breadthFirstSearch</code> function in <code><a href="docs/search.html">search.py</a></code>. Again, write a graph search algorithm that avoids expanding any already visited states. Test your code the same way you did for depth-first search.
 
 <pre>python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs</pre>
@@ -172,7 +180,7 @@ Does BFS find a least cost solution?   If not, check your implementation.
 While BFS will find a fewest-actions path to the goal, we might want to find paths that are "best" in other senses.  Consider <code><a href="layouts/mediumDottedMaze.lay">mediumDottedMaze</a></code> and <code><a href="layouts/mediumScaryMaze.lay">mediumScaryMaze</a></code>.  By changing the cost function, we can encourage Pacman to find different paths.  For example, we can charge more for dangerous steps in ghost-ridden areas or less for steps in food-rich areas, and a rational Pacman agent should adjust its behavior in response.
 
 
-<p><em><strong>Question 3 (5 points) </strong></em> Implement the uniform-cost graph search algorithm in
+<p><em><strong>Question 3 (1 points) </strong></em> Implement the uniform-cost graph search algorithm in
 the  <code>uniformCostSearch</code> function in <code><a href="docs/search.html">search.py</a></code>. We encourage you to look through <code><a href="docs/util.html">util.py</a></code> for some data structures that may be useful in your implementation. You should now observe successful behavior in all three of the following layouts, where the agents below are all UCS agents that differ only in the cost function they use (the agents and cost functions are written for you):
 
 <pre>python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs</pre>
@@ -181,13 +189,13 @@ the  <code>uniformCostSearch</code> function in <code><a href="docs/search.html"
 
 <pre>python pacman.py -l mediumScaryMaze -p StayWestSearchAgent</pre>
 
-<p> <em>Note:</em> You should get very low and very high path costs for the <code>StayEastSearchAgent</code> and <code>StayWestSearchAgent</code> respectively, due to their exponential cost functions (see <code><a href="docs/search.html">search.py</a></code> for details).
+<p> <em>Note:</em> You should get very low and very high path costs for the <code>StayEastSearchAgent</code> and <code>StayWestSearchAgent</code> respectively, due to their exponential cost functions (see <code><a href="docs/searchAgents.html">searchAgents.py</a></code> for details).
 
 <h3> A* search </h3>
 
-<p><em><strong> Question 4 (5 points)  </strong></em> Implement A* graph search in the empty function <code>aStarSearch</code> in <code><a href="docs/search.html">search.py</a></code>. A* takes a heuristic function as an argument.  Heuristics  take two arguments: a state in the search problem (the main argument), and the problem itself (for reference information).  The <code>nullHeuristic</code> heuristic function in <code><a href="docs/search.html">search.py</a></code> is a trivial example. 
+<p><em><strong> Question 4 (1 points)  </strong></em> Implement A* graph search in the empty function <code>aStarSearch</code> in <code><a href="docs/search.html">search.py</a></code>. A* takes a heuristic function as an argument.  Heuristics  take two arguments: a state in the search problem (the main argument), and the problem itself (for reference information).  The <code>nullHeuristic</code> heuristic function in <code><a href="docs/search.html">search.py</a></code> is a trivial example. 
 
-<p>You can test your A* implementation on the original problem of finding a path through a maze to a fixed position using the Manhattan distance heuristic (implemented already as <code>manhattanHeuristic</code> in <code><a href="docs/search.html">search.py</a></code>). 
+<p>You can test your A* implementation on the original problem of finding a path through a maze to a fixed position using the Manhattan distance heuristic (implemented already as <code>manhattanHeuristic</code> in <code><a href="docs/searchAgents.html">searchAgents.py</a></code>). 
 
 <pre>python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic </pre>
 
@@ -197,9 +205,9 @@ You should see that A* finds the optimal solution slightly faster than uniform c
 
 <p> The real power of A* will only be apparent with a more challenging search problem. Now, it's time to formulate a new problem and design a heuristic for it.  
     
-<p>In <em>corner mazes</em>, there are four dots, one in each corner.  Our new search problem is to find the shortest path through the maze that touches all four corners (whether the maze actually has food there or not).  Note that for some mazes like <code><a href="layouts/tinyCorners.lay">tinyCorners</a></code>, the shortest path does not always go to the closest food first!  <em>Hint</em>: the shortest path through <code>tinyCorners</code> takes 28 steps.
+<p>In <em>corner mazes</em>, there are four dots, one in each corner.  Our new search problem is to find the shortest path through the maze that touches all four corners (whether the maze actually has food there or not).  Note that for some mazes like <a href="layouts/tinyCorners.lay">tinyCorners</a>, the shortest path does not always go to the closest food first!  <em>Hint</em>: the shortest path through <code>tinyCorners</code> takes 28 steps.
 
-<p><em><strong> Question 5 (10 points)  </strong></em> Implement the <code>CornersProblem</code> search problem in <code><a href="docs/search.html">search.py</a></code>.  You will need to choose a state representation that encodes all the information necessary to detect whether all four corners have been reached. Now, your search agent should solve: 
+<p><em><strong> Question 5 (2 points)  </strong></em> Implement the <code>CornersProblem</code> search problem in <code><a href="docs/searchAgents.html">searchAgents.py</a></code>.  You will need to choose a state representation that encodes all the information necessary to detect whether all four corners have been reached. Now, your search agent should solve: 
 
 <pre>python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem</pre>
 
@@ -209,9 +217,9 @@ To receive full credit, you need to define an abstract state representation that
 
 <p> <em>Hint:</em> The only parts of the game state you need to reference in your implementation are the starting Pacman position and the location of the four corners.  
 
-<p>Our implementation of <code>breadthFirstSearch</code> expands just under 2000 search nodes on <code><a href="layouts/mediumCorners.lay">mediumCorners</a></code>.  However, heuristics (used with A* search) can reduce the amount of searching required.  
+<p>Our implementation of <code>breadthFirstSearch</code> expands just under 2000 search nodes on <a href="layouts/mediumCorners.lay">mediumCorners</a>.  However, heuristics (used with A* search) can reduce the amount of searching required.  
 
-<p><em><strong> Question 6 (10 points)  </strong></em> Implement an admissible heuristic for the <code>CornersProblem</code> in <code>cornersHeuristic</code>.  Grading: inadmissible heuristics will get <em>no</em> credit.  You get 2.5 points for any non-trivial admissible heuristic, another 2.5 points for expanding fewer than 1600 nodes, another  2.5 points for expanding fewer than 1200 nodes, and yet another 2.5 points for expanding fewer than 1000 nodes.  If you have some extra time, try to expand fewer than 800!
+<p><em><strong> Question 6 (2 points)  </strong></em> Implement an admissible heuristic for the <code>CornersProblem</code> in <code>cornersHeuristic</code>.  Grading: inadmissible heuristics will get <em>no</em> credit.  You get 0.5 point for any non-trivial admissible heuristic, another 0.5 point for expanding fewer than 1600 nodes, another  0.5 point for expanding fewer than 1200 nodes, and yet another 0.5 point for expanding fewer than 1000 nodes.  If you have some extra time, try to expand fewer than 800!
 
 <pre>python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5</pre>
 
@@ -226,11 +234,11 @@ To receive full credit, you need to define an abstract state representation that
     <dl>
       <dt><code>SearchProblem (search.py)</code></dt>
       <dd>A SearchProblem is an abstract object that represents the state space, successor function, costs, and goal state of a problem.  You will interact with any SearchProblem only through the methods defined at the top of <code><a href="docs/search.html">search.py</a></code></dd>
-      <dt><code>PositionSearchProblem (search.py)</code></dt>
+      <dt><code>PositionSearchProblem (searchAgents.py)</code></dt>
       <dd>A specific type of SearchProblem that you will be working with --- it corresponds to searching for a single pellet in a maze.  </dd>
-      <dt><code>CornersProblem (search.py)</code></dt>
+      <dt><code>CornersProblem (searchAgents.py)</code></dt>
       <dd>A specific type of SearchProblem that you will define --- it corresponds to searching for a path through all four corners of a maze.  </dd>
-      <dt><code>FoodSearchProblem (search.py)</code></dt>
+      <dt><code>FoodSearchProblem (searchAgents.py)</code></dt>
       <dd>A specific type of SearchProblem that you will be working with --- it corresponds to searching for a way to eat all the pellets in a maze.  </dd>
       <dt>Search Function</dt>
       <dd>A search function is a function which takes an instance of SearchProblem as a parameter, runs some algorithm, and returns a sequence of actions that lead to a goal.  Example of search functions are <code>depthFirstSearch</code> and <code>breadthFirstSearch</code>, which you have to write.  You are provided <code>tinyMazeSearch</code> which is a very bad search function that only works correctly on <code>tinyMaze</code>
