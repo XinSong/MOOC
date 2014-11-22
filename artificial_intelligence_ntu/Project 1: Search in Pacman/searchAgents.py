@@ -35,6 +35,7 @@ import util
 import time
 import search
 import searchAgents
+import itertools
 
 class GoWestAgent(Agent):
   "An agent that goes West until it can't."
@@ -281,12 +282,16 @@ class CornersProblem(search.SearchProblem):
   def getStartState(self):
     "Returns the start state (in your state space, not the full Pacman state space)"
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
-    
+    return (self.startingPosition, (False, False, False, False)) 
+
   def isGoalState(self, state):
     "Returns whether this search state is a goal state of the problem"
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    position, isCornerVisited = state
+    if isCornerVisited == (True, True, True, True):
+        return True
+    else:
+        return False
        
   def getSuccessors(self, state):
     """
@@ -310,7 +315,20 @@ class CornersProblem(search.SearchProblem):
       #   hitsWall = self.walls[nextx][nexty]
       
       "*** YOUR CODE HERE ***"
+      position, isCornerVisited = state
+      x,y = position
+      isCornerVisited = list(isCornerVisited)
+      dx, dy = Actions.directionToVector(action)
+      nextx, nexty = int(x + dx), int(y + dy)
       
+      if not self.walls[nextx][nexty]:
+          for i in range(0,4):
+            if (nextx, nexty) == self.corners[i]:
+                isCornerVisited[i] = True
+                break
+          successor_state = ((nextx, nexty), tuple(isCornerVisited))
+          successors.append((successor_state, action, 1))
+
     self._expanded += 1
     return successors
 
@@ -346,7 +364,23 @@ def cornersHeuristic(state, problem):
   walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
   
   "*** YOUR CODE HERE ***"
-  return 0 # Default to trivial solution
+  original, isCornerVisited = state
+  x,y = original
+  unvisitedCorners = [ corners[i] for i in isCornerVisited if isCornerVisited[i] == False ]
+  unvisitedCornerNum = len(unvisitedCorners)
+  
+  cost = 0
+  if unvisitedCornerNum == 0:
+    return 0
+  visitPath = itertools.permutations(unvisitedCorners)
+  for path in visitPath:
+    position = original
+    cost = 0
+    for corner in path:
+      cost = cost + util.manhattanDistance(original,corner)
+      position = corner
+  
+  return cost # Default to trivial solution
 
 class AStarCornersAgent(SearchAgent):
   "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
