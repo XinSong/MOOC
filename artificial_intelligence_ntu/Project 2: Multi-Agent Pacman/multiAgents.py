@@ -187,18 +187,6 @@ class MinimaxAgent(MultiAgentSearchAgent):
     else:  #Other GHOST
       return min([self.MinMax(gameState.generateSuccessor(agentIndex, action), depth, agentIndex+1) for action in gameState.getLegalActions(agentIndex)])
 
-#    agentNum = gameState.getNumAgents()
-#    if ( depth == 0 and agentIndex == 0 ) or gameState.isWin() or gameState.isLose():
-#      return self.evaluationFunction(gameState)
-#
-#    if agentIndex == 0 or agentIndex >= agentNum: #PACMAN
-#      return max([self.MinMax(gameState.generateSuccessor(0, action), depth, 1) for action in gameState.getLegalActions(0) if action != Directions.STOP])
-#    elif agentIndex == agentNum - 1: #The Last GHOST
-#      return min([self.MinMax(gameState.generateSuccessor(agentIndex, action), depth - 1, agentIndex+1) for action in gameState.getLegalActions(agentIndex)])
-#    else:  #Other GHOST
-#      return min([self.MinMax(gameState.generateSuccessor(agentIndex, action), depth, agentIndex+1) for action in gameState.getLegalActions(agentIndex)])
-              
-
 class AlphaBetaAgent(MultiAgentSearchAgent):
   """
     Your minimax agent with alpha-beta pruning (question 3)
